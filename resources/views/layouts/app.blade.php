@@ -13,16 +13,6 @@
 
     <title>{{ config('app.name', 'Aires') }}</title>
 
-    <!-- Scripts-Laravel -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
-    <!-- Fonts-Laravel -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
-    <!-- Styles-Laravel -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
     <!-- Custom fonts for this template-->
     <link href="{{asset('plantilla/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
     <link
@@ -711,6 +701,7 @@
                         </div>
 
                     </div> --}}
+                    @yield('content')
                 <!-- /.container-fluid -->
 
             </div>

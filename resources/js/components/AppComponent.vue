@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h3>app-component</h3>
+        <h3>app-component de Vue</h3>
     </div>
 </template>
 
