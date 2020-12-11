@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class HomeController extends Controller
 {
@@ -27,7 +28,18 @@ class HomeController extends Controller
     }
     public function store(Request $request)
     {
-        dd($request);
-        return view('formulario.show');
+        $text = "Nombre: ".$request->input('nombre').", Modelo: ".$request->input('modelo').", Serie: ".$request->input('serie').", Status: ".$request->input('status').".";
+
+        $producto['nombre'] = $request->input('nombre');
+        $producto['modelo'] = $request->input('modelo');
+        $producto['serie'] = $request->input('serie');
+        $producto['status'] = $request->input('status');
+
+        QrCode::format('svg')->size(200)
+                             ->generate($text, "../public/qrcodes/".$request->input('nombre').".svg");
+
+        $producto['url'] = asset('qrcodes/'.$request->input('nombre').".svg");
+
+        return view('formulario.show', ['producto' => $producto]);
     }
 }

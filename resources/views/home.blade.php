@@ -18,7 +18,7 @@
                        </div>
                        <div class="form-group">
                            <label for="">Modelo</label>
-                           <input name="modelo" type="text" class="form-control" placeholder="Modelo del Producto...">
+                           <input name="modelo" type="text" class="form-control" placeholder="Modelo...">
                        </div>
                        <div class="form-group">
                            <label for="">N° de serie</label>
