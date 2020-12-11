@@ -694,6 +694,9 @@
                         </div>
 
                     </div> --}}
+
+
+
                     @yield('content')
                 <!-- /.container-fluid -->
 
